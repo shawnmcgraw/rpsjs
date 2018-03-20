@@ -9,7 +9,39 @@
 <body>
 
   <script type="text/javascript">
-  
+  function computerPlay() {
+    //random number from 0-9
+    let compNum = Math.floor(Math.random() * 10);
+
+    if (compNum < 3) {
+      return "Rock";
+    } else if (compNum > 6) {
+      return "Paper";
+    } else {
+      return "Scissors";
+    }
+  }
+
+  function humanPlay() {
+    let playerSelect = prompt('Rock, Paper, or Scissors?');
+
+    if (playerSelect.toLowerCase == 'rock') {
+      return 'rock';
+    } else if (playerSelect.toLowerCase == 'paper') {
+      return 'paper';
+    } else if (playerSelect.toLowerCase == 'scissors') {
+      return 'scissors';
+    } else {
+      return 'error';
+    }
+  }
+
+
+  function playRound (playerSelection, computerSelection) {
+    const computerSelection = computerPlay();
+    const playerSelection = humanPlay();
+
+  }
 
   </script>
 
