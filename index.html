@@ -25,11 +25,11 @@
   function humanPlay() {
     let playerSelect = prompt('Rock, Paper, or Scissors?');
 
-    if (playerSelect.toLowerCase == 'rock') {
+    if (playerSelect.toLowerCase() === 'rock') {
       return 'rock';
-    } else if (playerSelect.toLowerCase == 'paper') {
+    } else if (playerSelect.toLowerCase() === 'paper') {
       return 'paper';
-    } else if (playerSelect.toLowerCase == 'scissors') {
+    } else if (playerSelect.toLowerCase() === 'scissors') {
       return 'scissors';
     } else {
       return 'error';
@@ -38,10 +38,11 @@
 
 
   function playRound (playerSelection, computerSelection) {
-    const computerSelection = computerPlay();
-    const playerSelection = humanPlay();
-
+    // single round of rock,paper scissors
+    
   }
+  const playerSelection = humanPlay();
+  const computerSelection = computerPlay();
 
   </script>
 
