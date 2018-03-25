@@ -36,13 +36,31 @@
     }
   }
 
-
-  function playRound (playerSelection, computerSelection) {
-    // single round of rock,paper scissors
-    
+  function win(cs) {
+    alert('You win! The computer played ${cs}');
   }
-  const playerSelection = humanPlay();
-  const computerSelection = computerPlay();
+
+  function lose(cs) {
+    alert('You lose! The computer played ${cs}');
+  }
+
+  function playRound () {
+    // single round of rock,paper scissors
+    const cs = computerPlay();
+    const ps = humanPlay();
+    const result = ps+cs;
+    const wins = ['rockscissors', 'paperrock', 'scissorspaper'];
+
+    if (ps === cs) {
+      alert(`Both players chose ${ps}, the game is a draw.`);
+    } else if (wins.indexOf(result) !== -1) {
+      win(cs);
+    } else {
+      lose(cs);
+    }
+  }
+
+  playRound();
 
   </script>
 
